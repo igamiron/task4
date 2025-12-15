@@ -14,7 +14,6 @@ RUN mvn clean install -DskipTests
 
 # ---- Deploy Stage ----
 FROM openjdk:11-jdk-slim
-
 # Copy the built JAR from the build stage
 COPY --from=build /app/target/thymeleaf-0.0.1-SNAPSHOT.jar /app.jar
 
